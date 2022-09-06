@@ -1,0 +1,23 @@
+{
+    "manifest_version": 2,
+    "name": "DDG Position",
+    "version": "1.0",
+   
+    "description": "Places a marker with the position a result in Google appears on duckduckgo for the same search term.",
+   
+    "content_scripts": [
+      {
+        "matches": ["*://*.google.com/search?*","*://stockx.com/*"],
+        "js": ["download_annotation.js"]
+      }
+    ],
+    "browser_action": {
+      "default_icon": {
+        "16": "icons/corrct.png",
+        "32": "icons/page-32.png"
+      }
+    },
+    "permissions": [
+      "*://duckduckgo.com/html/*"
+    ]
+  }
